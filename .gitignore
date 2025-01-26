@@ -1,0 +1,11 @@
+# Ignorar o diretório virtualenv
+venv/
+
+# Ignorar o diretório de configurações do PyCharm (ou outro IDE)
+.idea/
+
+# Ignorar arquivos de cache Python
+__pycache__/
+
+# Ignorar arquivo de cobertura
+.coverage
