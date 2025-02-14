@@ -6,7 +6,7 @@ from todo_app.tasks import Task
 
 class TestTasks():
 
-    def teste_sucesso_criacao_da_task(self):
+    def test_sucesso_criacao_da_task(self):
         task = Task("Fazer Compra", "20/02/2025", "Realizar compra da semana")
         assert task.name == "Fazer Compra"
         assert task.due_date == "20/02/2025"
@@ -27,6 +27,7 @@ class TestTasks():
             mock_datetime.now.return_value = mock_date
 
         task = Task("Fazer Compras","20/02/2025","Realizar a compra da semana")
+        task.created_at = mock_date
 
         esperado = (
             f"Tarefa: Fazer Compras\n"
